@@ -10,10 +10,14 @@ import UpcomingMoviesPage from "./pages/upcomingMovies";
 import TrendingMoviesPage from "./pages/trendingMovies";
 import StreamingMoviesPage from "./pages/streamingMovies";
 import TopMoviesPage from "./pages/topMovies";
+import LoginPage from "./pages/loginPage";
+import SignUpPage from "./pages/signUpPage";
 import { QueryClientProvider, QueryClient } from "react-query";
 import { ReactQueryDevtools } from 'react-query/devtools';
 import MoviesContextProvider from "./contexts/moviesContext";
-import AddMovieReviewPage from './pages/addMovieReviewPage'
+import AuthProvider from "./contexts/authContext";
+import AuthHeader from "./authHeader";
+import AddMovieReviewPage from './pages/addMovieReviewPage';
 
 const queryClient = new QueryClient({
   defaultOptions: {
@@ -40,6 +44,8 @@ const App = () => {
           <Route path="/movies/trending" element={< TrendingMoviesPage />} />
           <Route path="/movies/streaming" element={< StreamingMoviesPage />} />
           <Route path="/movies/top" element={< TopMoviesPage />} />
+          <Route path="/movies/login" element={ <LoginPage /> } />
+          <Route path="/movies/signup" element={< SignUpPage />} />
           <Route path="/" element={<HomePage />} />
           <Route path="*" element={ <Navigate to="/" /> } />
         </Routes>
