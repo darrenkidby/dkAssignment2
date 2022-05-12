@@ -16,7 +16,6 @@ import { QueryClientProvider, QueryClient } from "react-query";
 import { ReactQueryDevtools } from 'react-query/devtools';
 import MoviesContextProvider from "./contexts/moviesContext";
 import AuthProvider from "./contexts/authContext";
-import AuthHeader from "./authHeader";
 import AddMovieReviewPage from './pages/addMovieReviewPage';
 import ProtectedRoutes from "./protectedRoutes";
 
@@ -36,7 +35,6 @@ const App = () => {
       <BrowserRouter>
       <AuthProvider>
       <SiteHeader />
-      <AuthHeader />
       <MoviesContextProvider>
         <Routes>
           <Route path="/reviews/form" element={ <AddMovieReviewPage /> } />

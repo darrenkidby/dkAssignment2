@@ -13,6 +13,7 @@ import img from '../../images/pexels-dziana-hasanbekava-5480827.jpg';
 import { getGenres } from "../../api/tmdb-api";
 import { useQuery } from "react-query";
 import Spinner from '../spinner'
+import AuthHeader from "../../authHeader";
 
 const formControl = 
   {
@@ -62,6 +63,7 @@ export default function FilterMoviesCard(props) {
           <SearchIcon fontSize="large" />
           Filter the movies.
         </Typography>
+        <AuthHeader />
         <TextField
           sx={{...formControl}}
           id="filled-search"
@@ -72,7 +74,6 @@ export default function FilterMoviesCard(props) {
           onChange={handleTextChange}
         />
         <FormControl sx={{...formControl}}>
-          <InputLabel id="genre-label">Genre</InputLabel>
           <Select
             labelId="genre-label"
             id="genre-select"

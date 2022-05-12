@@ -58,6 +58,22 @@ router.post('/:id/reviews', (req, res) => {
 router.get('/tmdb/upcoming', asyncHandler( async(req, res) => {
     const upcomingMovies = await getUpcomingMovies();
     res.status(200).json(upcomingMovies);
-  }));
+    }));
+
+router.get('/tmdb/trending', asyncHandler( async(req, res) => {
+    const trendingMovies = await getTrendingMovies();
+    res.status(200).json(trendingMovies);
+     }));
+
+  router.get('/tmdb/streaming', asyncHandler( async(req, res) => {
+    const streamingMovies = await getStreamingMovies();
+    res.status(200).json(streamingMovies);
+    }));
+
+    router.get('/tmdb/top', asyncHandler( async(req, res) => {
+        const topMovies = await getTopMovies();
+        res.status(200).json(topMovies);
+    }));
+  
 
 export default router;
