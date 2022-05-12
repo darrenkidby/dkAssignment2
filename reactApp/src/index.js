@@ -46,11 +46,11 @@ const App = () => {
           <Route path="/movies/login" element={ <LoginPage /> } />
           <Route path="/movies/signup" element={< SignUpPage />} />
           <Route path="/" element={<HomePage />} />
+          <Route element={<ProtectedRoutes />}>
           <Route path="/movies/upcoming" element={< UpcomingMoviesPage />} />
           <Route path="/movies/trending" element={< TrendingMoviesPage />} />
-          <Route element={<ProtectedRoutes />}>
-          <Route path="/movies/streaming" element={< StreamingMoviesPage />} /></Route>
-          <Route path="/movies/top" element={< TopMoviesPage />} />
+          <Route path="/movies/streaming" element={< StreamingMoviesPage />} />
+          <Route path="/movies/top" element={< TopMoviesPage />} /></Route>
           <Route path="*" element={ <Navigate to="/" /> } />
         </Routes>
       </MoviesContextProvider>

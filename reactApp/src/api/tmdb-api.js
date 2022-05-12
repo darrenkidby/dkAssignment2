@@ -131,7 +131,7 @@ export const getTopMovies = () => {
   };
 
   export const login = (username, password) => {
-    return fetch('/movies-api/api/users', {
+    return fetch('/api/users', {
         headers: {
             'Content-Type': 'application/json'
         },
@@ -141,7 +141,7 @@ export const getTopMovies = () => {
 };
 
 export const signup = (username, password) => {
-    return fetch('/movies-api/api/users?action=register', {
+    return fetch('/api/users?action=register', {
         headers: {
             'Content-Type': 'application/json'
         },
