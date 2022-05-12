@@ -13,7 +13,7 @@ const BaseAuthHeader = (_props) => {
   ) : (
     <p>
       You are not logged in{" "}
-      <button onClick={() => navigate('/login')}>Login</button>
+      <button onClick={() => navigate('/movies/login')}>Login</button>
     </p>
   );
 };

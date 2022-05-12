@@ -20,7 +20,7 @@ const SignUpPage = _props => {
   }
 
   if (registered === true) {
-    return <Navigate to="/login" />;
+    return <Navigate to="/movies/login" />;
   }
 
   return (
