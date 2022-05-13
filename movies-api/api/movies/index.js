@@ -3,7 +3,7 @@ import uniqid from 'uniqid';
 import { movies, movieReviews, movieDetails } from './moviesData';
 import movieModel from './movieModel';
 import asyncHandler from 'express-async-handler';
-import { getUpcomingMovies } from '../tmdb-api';
+import { getUpcomingMovies, getTrendingMovies, getStreamingMovies, getTopMovies } from '../tmdb-api';
 
 const router = express.Router(); 
 
